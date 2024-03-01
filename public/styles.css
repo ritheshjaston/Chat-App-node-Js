@@ -1,21 +1,35 @@
-/* Add your custom styles here */
-body {
-    background-color: #f8f9fa;
-}
-
-.container {
-    max-width: 600px;
-}
-
-.card {
-    margin-top: 20px;
-}
-
-#chat-box {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.input-group {
-    margin-top: 10px;
-}
+.logo {
+    display: block;
+    margin: auto;
+    width: 10%;
+    justify-content: center;
+  }
+  .container {
+    max-width: 70%;
+  
+    margin: auto;
+  }
+  .message{
+      background-color: brown;
+    /* height: 10vh; */
+  }
+  .left {
+    padding: 10px;
+    background-color: yellow;
+    float: left;
+    clear: both;
+    border-radius: 10px;
+  }
+  .right {
+    padding: 10px;
+    background-color: blue;
+    float: right;
+    clear: both;
+    color: white;
+    border-radius: 10px;
+  }
+  #sendcontainer{
+      text-align: center;
+      margin: auto;
+  }
+  
