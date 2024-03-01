@@ -1,35 +1,82 @@
 .logo {
-    display: block;
-    margin: auto;
-    width: 10%;
-    justify-content: center;
-  }
-  .container {
-    max-width: 70%;
-  
-    margin: auto;
-  }
-  .message{
-      background-color: brown;
-    /* height: 10vh; */
-  }
-  .left {
-    padding: 10px;
-    background-color: yellow;
-    float: left;
-    clear: both;
-    border-radius: 10px;
-  }
-  .right {
-    padding: 10px;
-    background-color: blue;
-    float: right;
-    clear: both;
-    color: white;
-    border-radius: 10px;
-  }
-  #sendcontainer{
-      text-align: center;
-      margin: auto;
-  }
-  
+  display: block;
+  margin: auto;
+  width: 10%;
+  justify-content: center;
+}
+body{
+    background: url('bg.jpg');
+}
+.container {
+  max-width: 70%;
+  max-height: 70vh;
+  margin: auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+
+  background: transparent;
+  backdrop-filter: blur(7px);
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.message {
+  background-color: brown;
+  margin-top: 3px;
+  /* height: 10vh; */
+}
+.left {
+  padding: 10px;
+  background-color: yellow;
+  float: left;
+  clear: both;
+  border-radius: 10px;
+}
+.center {
+  padding: 5px;
+  background-color: rgb(145, 145, 139);
+  text-align: center;
+  margin: auto;
+  width: fit-content;
+  clear: both;
+  border-radius: 10px;
+  margin-top: 3px;
+}
+.right {
+  padding: 10px;
+  background-color: blue;
+  float: right;
+  clear: both;
+  color: white;
+  border-radius: 10px;
+}
+#sendcontainer {
+  text-align: center;
+  margin: auto;
+}
+nav h2 {
+  text-align: center;
+  color: black;
+  font-size: 35px;
+}
+#input {
+  width: 58%;
+  height: 34px;
+  background: #ffc107;
+  border: none;
+  border-radius: 4px;
+  color: black;
+}
+
+#sub {
+  width: 10%;
+  height: 34px;
+  background: #29af2e;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+#sub:hover {
+  background: #00702b;
+}

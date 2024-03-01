@@ -2,27 +2,39 @@ var container = document.getElementById('container');
 const username = prompt("Please enter your name:");
 $(function () {
   const socket = io();
-
+    
   socket.emit("setUsername", username);
 
   $("form").submit(function () {
-    socket.emit("chat message", $("#input").val());
-    $("#input").val("");
-    return false;
+    if($("#input").val()!=""){
+
+        socket.emit("chat message", $("#input").val());
+        $("#input").val("");
+        return false;
+    }
   });
 
   socket.on("chat message", function (msg) {
     console.log(msg);
     const a = msg.split(":");
+    let array = a.length;
+    console.log(array)
     console.log(a[1]);
 
     var newMessage = document.createElement('div');
-    if (a[0] == username) {
-        newMessage.className = 'message right';
-    } else {
-        newMessage.className = 'message left';
+    if(array!=1){
+        if (a[0] == username) {
+            newMessage.className = 'message right';
+            newMessage.textContent = a[1];
+        } else {
+            newMessage.className = 'message left';
+            newMessage.textContent = a[0] + ' : ' + a[1];
+        }
+    }else{
+        newMessage.className = 'message center';
+        newMessage.textContent = a[0] + ' is Joined to the chat';
     }
-    newMessage.textContent = a[0] + ' : ' + a[1];
+    
     var container = document.getElementById('container'); // Replace 'yourContainerId' with the actual ID of your container
     container.appendChild(newMessage);
 });

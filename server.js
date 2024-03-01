@@ -32,6 +32,7 @@ io.on('connection', (socket) => {
     socket.on('setUsername', (username) => {
         socket.request.session.username = username;
         socket.request.session.save();
+        io.emit('chat message', `${username}`);
     });
 
     socket.on('disconnect', () => {
